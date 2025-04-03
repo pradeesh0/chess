@@ -103,7 +103,7 @@ public class UserService {
         Optional<User> loserOpt = userRepository.findByEmail(loserEmail);
 
         if (winnerOpt.isEmpty() || loserOpt.isEmpty()) {
-            return ResponseEntity.badRequest().body("Invalid users provided.");
+            return ResponseEntity.badRequest().body("Invalid user provided.");
         }
 
         User winner = winnerOpt.get();
