@@ -1,0 +1,98 @@
+.matchmaking-container {
+  background: #1e1e1e;
+  padding: 40px;
+  width: 500px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0px 5px 20px rgba(0, 255, 170, 0.5);
+  border: 2px solid #00ffaa;
+  margin: auto;
+}
+
+.matchmaking-container h2 {
+  font-size: 36px;
+  color: #00ffaa;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+  font-weight: bold;
+  text-shadow: 0px 0px 10px rgba(0, 255, 170, 0.8);
+  letter-spacing: 2px;
+  border-bottom: 3px solid #00ffaa;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.matchmaking-container .online-players {
+  max-height: 300px;
+  overflow-y: auto;
+  background: #121212;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #00ffaa;
+  box-shadow: inset 0px 0px 15px rgba(0, 255, 170, 0.3);
+}
+
+.matchmaking-container ul {
+  list-style: none;
+  padding: 0;
+}
+
+.matchmaking-container li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  margin: 10px 0;
+  background: #222;
+  border-left: 2px solid #00ffaa;
+  border-radius: 10px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.matchmaking-container button {
+  background: #ff0066;
+  border: none;
+  padding: 8px 14px;  /* Reduced padding */
+  font-size: 14px;    /* Smaller font size */
+  border-radius: 6px; /* Slightly smaller radius */
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  color: white;
+  text-transform: uppercase;
+  border: 2px solid transparent;
+  
+}
+
+.matchmaking-container button:hover {
+  background: #d6005b;
+  border-color: white;
+  transform: scale(1.1);
+}
+
+.matchmaking-container .match-request {
+  background: #ff0066;
+  padding: 25px;
+  border-radius: 14px;
+  margin-top: 20px;
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  animation: fadeIn 0.5s ease-in-out;
+  border: 2px solid #00ffaa;
+}
+
+.matchmaking-container .match-request button {
+  margin-top: 12px;
+}
+
+@keyframes fadeIn {
+  from {
+    transform: translateY(-15px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

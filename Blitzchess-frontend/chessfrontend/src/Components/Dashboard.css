@@ -1,0 +1,140 @@
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(135deg, #000, #0f2027);
+  color: white;
+  font-family: "Poppins", sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+.dashboard-container .settings-container {
+  position: absolute;
+  top: 40px;
+  right: 500px;
+}
+
+.dashboard-container .settings-icon {
+  width: 40px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+
+.dashboard-container .settings-icon:hover {
+  transform: rotate(90deg) scale(1.1);
+  filter: brightness(1.5);
+}
+
+.dashboard-container .logout-tab {
+  position: absolute;
+  width: 180px;
+  top: 50px;
+  right: 20px;
+  background: rgba(0, 195, 255, 0.2);
+  backdrop-filter: blur(15px);
+  border-radius: 10px;
+  padding: 12px;
+  box-shadow: 0 4px 10px rgba(0, 195, 255, 0.4);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+}
+
+.dashboard-container .logout-tab.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dashboard-container .logout-tab button {
+  background: #00c3ff;
+  color: black;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+  width: 100%;
+  margin-top: 5px;
+}
+
+.dashboard-container .logout-tab button:hover {
+  background: #009ddf;
+}
+
+.dashboard-container .user-profile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 600px;
+  height: 180px;
+  padding: 30px;
+  background: rgba(0, 195, 255, 0.1);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 195, 255, 0.3);
+  transition: transform 0.5s ease-in-out;
+}
+
+.dashboard-container .user-profile:hover {
+  transform: scale(1.05);
+}
+
+.dashboard-container .profile-pic {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 5px solid rgb(58, 157, 182);
+  margin-right: 40px;
+}
+
+.dashboard-container .user-info {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding-left: 20px;
+}
+
+.dashboard-container .user-info h2 {
+  color: rgb(167, 63, 160);
+  margin: 0;
+  font-size: 40px;
+  font-weight: 600;
+}
+
+.dashboard-container p {
+  font-size: 19px;
+  margin: 5px 0;
+  opacity: 0.8;
+}
+
+.dashboard-container .play-chess {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} 
+
+.dashboard-container .start-game-btn {
+  font-size: 22px;
+  padding: 16px 32px;
+  background: #00c3ff;
+  color: black;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 15px rgba(0, 195, 255, 0.4);
+  width: 300px;
+}
+
+.dashboard-container .start-game-btn:hover {
+  background: #009ddf;
+  transform: scale(1.1);
+}

@@ -1,0 +1,103 @@
+/* Auth.css */
+.auth-container {
+  background-color: #000; /* Black background */
+  color: #fff; /* White text */
+  width: 400px;
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.2);
+  margin: auto;
+  margin-top: 100px;
+}
+
+.auth-container h2 {
+  margin-bottom: 1.5rem;
+  color:rgb(86, 175, 183)
+}
+
+.auth-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.auth-container input {
+  background: #222; /* Dark grey input */
+  width: 100%; /* Ensures all inputs are the same width */
+  box-sizing: border-box;
+  color: #fff;
+  border: 1px solid #444;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.auth-container input:focus {
+  border-color: #29afd7; /* Neon blue border on focus */
+  box-shadow: 0 0 10px rgba(0, 195, 255, 0.8);
+  outline: none;
+}
+
+.auth-container button {
+  background: #00c3ff; /* Neon blue button */
+  color: black;
+  padding: 10px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.auth-container button:hover {
+  background: #009ddf; /* Darker blue on hover */
+}
+
+.auth-container button:disabled {
+  background: #666;
+  cursor: not-allowed;
+}
+
+.auth-container .error {
+  color: red;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+.auth-container p span {
+  color: #00c3ff;
+  cursor: pointer;
+}
+
+.auth-container p span:hover {
+  text-decoration: underline;
+}
+
+/* Loader animation */
+.loader {
+  border: 3px solid transparent;
+  border-top: 3px solid white;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  animation: spin 0.6s linear infinite;
+  display: inline-block;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.auth-container input:hover {
+  border-color: #00c3ff;
+}
+
+.auth-container input:focus {
+  border-color: #00c3ff;
+  box-shadow: 0 0 10px rgba(0, 195, 255, 0.8);
+}

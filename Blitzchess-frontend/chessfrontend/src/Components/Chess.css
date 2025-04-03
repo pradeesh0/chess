@@ -1,0 +1,112 @@
+.chessboard-container {  
+  display: flex;  
+  flex-direction: column;  
+  align-items: center;  
+  justify-content: center;  
+  min-height: 100vh;  
+  background-color: #060606;  
+  padding: 20px;  
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;  
+}  
+
+.chessboard-container h2 {  
+  color: #4ecfd8;  
+  margin-bottom: 20px;  
+  text-align: center;  
+}  
+
+.chessboard-container .timer-container {  
+  display: flex;  
+  justify-content: space-between;  
+  width: 400px;  
+  margin-bottom: 1px;  
+}  
+
+.chessboard-container .timer-container h3 {  
+  background-color: #333;  
+  color: rgb(199, 106, 59);  
+  padding: 8px 15px;  
+  border-radius: 5px;  
+  font-size: 1.1rem;  
+  margin: 0;  
+}  
+
+.chessboard-container .message-row {  
+  display: flex;  
+  justify-content: center;  
+  width: 500px;  
+  margin-bottom: 20px;  
+  height: 40px;  
+}  
+
+.chessboard-container .check-message-container,   
+.chessboard-container .invalid-move-container {  
+  opacity: 0;  
+  transition: opacity 0.3s ease;  
+  flex: 1;  
+  text-align: center;  
+}  
+
+.chessboard-container .check-message-container.show,   
+.chessboard-container .invalid-move-container.show {  
+  opacity: 1;  
+}  
+
+.chessboard-container .check-message-container h3 {  
+  color: #d4af37; /* gold color for check */  
+  background-color: rgba(212, 175, 55, 0.1);  
+  padding: 5px;  
+  border-radius: 5px;  
+}  
+
+.chessboard-container .invalid-move-container h3 {  
+  color: #e74c3c; /* red color for invalid moves */  
+  background-color: rgba(231, 76, 60, 0.1);  
+  padding: 5px;  
+  border-radius: 5px;  
+}  
+
+.chessboard-container .chessboard {  
+  margin: 0 auto;  
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);  
+  border-radius: 5px;  
+}  
+
+.chessboard-container .winner-message {  
+  color: #27ae60; /* green for winner */  
+  margin-top: 20px;  
+  animation: pulse 1.5s infinite;  
+}  
+
+.chessboard-container .loading-overlay {  
+  position: fixed;  
+  top: 0;  
+  left: 0;  
+  width: 100%;  
+  height: 100%;  
+  background-color: rgba(0, 0, 0, 0.7);  
+  display: flex;  
+  justify-content: center;  
+  align-items: center;  
+  color: white;  
+  font-size: 2rem;  
+  z-index: 1000;  
+}  
+
+@keyframes pulse {  
+  0% { transform: scale(1); }  
+  50% { transform: scale(1.05); }  
+  100% { transform: scale(1); }  
+}  
+
+/* Responsive adjustments */  
+@media (max-width: 600px) {  
+  .chessboard-container .chessboard {  
+    width: 90vw !important;  
+  }  
+  
+  .chessboard-container .timer-container,  
+  .chessboard-container .message-row {  
+    width: 90vw;  
+  }  
+}  
