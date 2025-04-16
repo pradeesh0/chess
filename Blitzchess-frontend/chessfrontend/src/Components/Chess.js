@@ -92,7 +92,7 @@ const ChessGame = () => {
           console.log("Updated Ratings:", response.data);
           // Send game over message via WebSocket
       sendMessage(JSON.stringify({ type: "gameOver", result, rating: response.data, winnerEmail,loserEmail}))
-          navigate("/result", { state: { result, rating: response.data } });
+          navigate("/result", { state: { result, rating: response.data} });
         }
       } catch (error) {
         console.error("Error updating rating:", error);
